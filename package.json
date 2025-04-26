@@ -1,0 +1,17 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot that provides personalized startup ideas and insights",
+  "main": "telegram-bot-code.js",
+  "scripts": {
+    "start": "node telegram-bot-code.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.15.3",
+    "axios": "^1.6.7",
+    "node-cron": "^3.0.3",
+    "firebase-admin": "^12.0.0",
+    "dotenv": "^16.4.4",
+    "openai": "^4.28.0"
+  }
+} 

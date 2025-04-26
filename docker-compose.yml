@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  pulsebot:
+    build: .
+    restart: always
+    env_file: .env
+    volumes:
+      - ./logs:/usr/src/app/logs
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (r) => r.statusCode === 200)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3 
