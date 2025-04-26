@@ -1,19 +1,72 @@
-# PulseBot - AI-Powered Startup Ideas & Insights Bot
+# PulseBot - AI-Powered Telegram Business Ideas Bot 🚀
 
-PulseBot is a Telegram bot that delivers personalized startup ideas, trends, and news summaries using AI. It helps entrepreneurs stay informed and get creative business ideas tailored to their interests.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
+[![Telegram Bot API](https://img.shields.io/badge/Telegram%20Bot%20API-✓-blue)](https://core.telegram.org/bots/api)
+[![OpenAI API](https://img.shields.io/badge/OpenAI%20API-GPT--3.5-orange)](https://openai.com/api/)
 
-## Features
+An intelligent Telegram bot that generates personalized startup ideas and business insights using AI. Get daily inspiration, detailed business plans, and market analysis tailored to your interests.
 
-- 🚀 Daily personalized startup ideas
-- 📈 Current market trends
-- 📰 Relevant news summaries
-- 🎯 Topic customization
-- ⏰ Flexible delivery scheduling
-- 🌐 Timezone support
-- 🔄 On-demand insights with `/now` command
-- 📝 Detailed MVP outlines with "Expand" feature
+## 🌟 Features
 
-## Commands
+- 🤖 AI-powered business idea generation
+- 📊 Personalized insights based on user interests
+- ⏰ Customizable daily delivery schedule
+- 🌍 Timezone support
+- 💡 Detailed MVP outlines with "Expand" feature
+- 🔄 Auto-retry and rate limit handling
+- ❤️ Health check endpoint for monitoring
+- 🐳 Docker support for easy deployment
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 14+
+- Telegram Bot Token (from [@BotFather](https://t.me/botfather))
+- OpenAI API Key
+- Firebase Project
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mehedihnb/Telegram-Bot.git
+   cd Telegram-Bot
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   Edit .env with your credentials:
+   - BOT_TOKEN (from @BotFather)
+   - OPENAI_API_KEY (from OpenAI)
+   - GOOGLE_APPLICATION_CREDENTIALS_JSON (from Firebase)
+
+4. Start the bot:
+   ```bash
+   npm start
+   ```
+
+### Docker Deployment
+
+1. Build and run with Docker Compose:
+   ```bash
+   docker-compose up -d
+   ```
+
+2. Check logs:
+   ```bash
+   docker-compose logs -f
+   ```
+
+## 💻 Available Commands
 
 - `/start` - Initialize your account
 - `/settings` - Change delivery time
@@ -23,80 +76,57 @@ PulseBot is a Telegram bot that delivers personalized startup ideas, trends, and
 - `/help` - Show help message
 - `/stop` - Pause subscription
 
-## Setup Instructions
+## 🔧 Configuration
 
-1. **Prerequisites**
-   - Node.js 14+ installed
-   - Firebase account
-   - OpenAI API key
-   - Telegram Bot token
+### Environment Variables
 
-2. **Environment Setup**
-   Create a `.env` file with:
-   ```
-   # Bot Configuration
-   BOT_TOKEN=your_telegram_bot_token
+| Variable | Description | Required |
+|----------|-------------|----------|
+| BOT_TOKEN | Telegram Bot API Token | Yes |
+| OPENAI_API_KEY | OpenAI API Key | Yes |
+| GOOGLE_APPLICATION_CREDENTIALS_JSON | Firebase Service Account JSON | Yes |
 
-   # OpenAI API Key
-   OPENAI_API_KEY=your_openai_api_key
+### Health Check
 
-   # Firebase Configuration
-   GOOGLE_APPLICATION_CREDENTIALS_JSON=your_firebase_service_account_json
-   ```
+The bot includes a health check endpoint at:
+```
+http://localhost:3000/health
+```
 
-3. **Installation**
-   ```bash
-   npm install
-   ```
+## 🚢 Deployment Options
 
-4. **Running the Bot**
-   ```bash
-   # Start the bot
-   node deploy.js start
+- Railway.app (Recommended)
+- Render.com
+- Heroku
+- Local Docker deployment
 
-   # Check status
-   node deploy.js status
+For detailed deployment instructions, see [deployment-guide.md](deployment-guide.md)
 
-   # Stop the bot
-   node deploy.js stop
+## 🛡️ Security
 
-   # Restart the bot
-   node deploy.js restart
-   ```
+- Rate limiting with exponential backoff
+- Request deduplication
+- Secure credential handling
+- No sensitive data logging
 
-## Deployment
+## 🤝 Contributing
 
-1. **Server Requirements**
-   - Linux/Unix environment
-   - Node.js 14+
-   - PM2 or similar process manager (optional)
-   - 512MB RAM minimum
-   - 1GB storage minimum
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-2. **Production Deployment**
-   ```bash
-   # Install PM2 globally
-   npm install -g pm2
+## 📝 License
 
-   # Start with PM2
-   pm2 start telegram-bot-code.js --name pulsebot
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-   # Monitor the bot
-   pm2 monit pulsebot
-   ```
+## 🙏 Acknowledgments
 
-## Error Handling
+- [Telegraf](https://github.com/telegraf/telegraf)
+- [OpenAI](https://openai.com)
+- [Firebase](https://firebase.google.com)
 
-The bot includes:
-- Automatic retry for rate limits
-- Error logging to `bot.log`
-- Firebase delivery tracking
-- Graceful shutdown handling
+## 📞 Support
 
-## Support
-
-For issues or questions, please open an issue in the repository or contact support@pulsebot.example.com
-
-## License
-
-MIT License - Feel free to use and modify for your needs. 
+For support, email mehediuxd@gmail.com or join our [Telegram support group](https://t.me/pulsebotsupport). 
