@@ -129,4 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email mehediuxd@gmail.com or join our [Telegram support group](https://t.me/pulsebotsupport). 
+For support, email mehediuxd@gmail.com or join our [Telegram support group](https://t.me/imehedih). 
